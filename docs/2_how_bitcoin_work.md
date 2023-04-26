@@ -50,7 +50,7 @@
 
 实际上，在比特币账本中，并不是的记录某个账户的余额是多少（和以太坊的账户余额模型不一样），比特币引入了一个“未花费的交易输出”（UTXO： Unspent Transaction Output）概念，一个 UTXO 代表 “一整块” 的可以使用比特币。UTXO 作为交易的输入。
 
-一个 UTXO 在交易时可以产生多个 UTXO ，比特币的交易时不断消费老 UTXO 产生新的 UTXO 的过程，当一个 UTXO 被作为交易的输入后，就不再是未花费的了（STXO），在某个时间点，所有 UTXO 的集合都被称为 UTXO 集。比特币节点会追踪 UTXO 集，从而确定哪些代币未被花费，以及哪些人可以花费它们。从而避免双花（Double Spend）问题。
+一个 UTXO 在交易时可以产生多个 UTXO ，比特币的交易时不断消费老 UTXO 产生新的 UTXO 的过程，当一个 UTXO 被作为交易的输入后，就不再是未花费的状态了（STXO：当一个 UTXO 被用作输入参与一笔新的交易时，它就会被标记为已花费，成为 STXO，即Spent Transaction Output），在某个时间点，所有 UTXO 的集合都被称为 UTXO 集。比特币节点会追踪 UTXO 集，从而确定哪些代币未被花费，以及哪些人可以花费它们。从而避免双花（Double Spend）问题。
 
 <details>
   <summary> 思考：最初的 UTXO 从哪里来的呢？</summary>
